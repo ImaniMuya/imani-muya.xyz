@@ -1,0 +1,111 @@
+<html>
+  <head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="WebAniProj2.css">
+
+  <style>  
+ .card {
+        transform: rotate(0deg);
+    }  
+  
+ #card1 {
+    left: 100px;
+    top: 100px;
+    position: absolute;
+	transform: rotate(0deg);
+    animation: centerCard 2s 1s, fan1 .5s 4s;
+    animation-iteration-count: 1, 1;
+    animation-fill-mode: forwards, forwards;
+  }
+
+  #card2{
+    left: 300px;
+    top: 100px;
+	transform: rotate(0deg);
+    animation: centerCard 2s 1s, fan2 .5s 4s;
+    animation-fill-mode: forwards;
+  }
+  #card3{
+    left: 500px;
+    top: 100px;
+	transform: rotate(0deg);
+    animation: centerCard 2s 1s;
+    animation-fill-mode: forwards;
+  }
+  #card4{
+    left: 700px;
+    top: 100px;
+	transform: rotate(0deg);
+    animation: centerCard 2s 1s, fan4 .5s 4s;
+    animation-fill-mode: forwards;
+  }
+  #card5{
+    left: 900px;
+    top: 100px;
+	transform: rotate(0deg);
+    animation: centerCard 2s 1s, fan5 .5s 4s;
+    animation-fill-mode: forwards;
+    }
+
+      #card1:hover {
+	   transform: translateY(-10px) rotate(-80deg);
+      } 
+
+	@keyframes centerCard {
+		from{}
+		to{left: 500px;}
+	}	
+	@keyframes fan1 {
+		from{}
+		to {transform: rotate(-80deg)}
+	}
+	@keyframes fan2 {
+		from{}
+		to {transform: rotate(-45deg)}
+	}
+	@keyframes fan4 {
+		from{}
+		to {transform: rotate(45deg)}
+	}
+	@keyframes fan5 {
+		from{}
+		to {transform: rotate(80deg)}
+	}
+
+
+  </style>
+  </head>
+
+  <body>
+    <div id="background" >
+        <div id="container">
+            <a href="WebAniProj2 - Heart.html">
+                <div id="card1" class="card">
+                    <div id="heart"></div>
+                </div>
+            </a>
+            <a href="WebAniProj2 - Triangle.html">
+                <div id="card2" class="card">
+                    <div class="triangle"></div>
+                </div>
+            </a>
+            <a href="WebAniProj2 - Circle.html">
+                <div id="card3" class="card">
+                    <div class="circle"></div>
+                </div>
+            </a>
+            <a href="WebAniProj2 - Diamond.html">
+                <div id="card4" class="card">
+                    <div id="cut-diamond"></div>
+                </div>
+            </a>
+            <a href="WebAniProj2 - Square.html">
+                <div id="card5" class="card">
+                    <div class="box"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+  </body>
+
+</html>

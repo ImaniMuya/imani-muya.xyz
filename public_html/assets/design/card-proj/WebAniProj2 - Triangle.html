@@ -1,0 +1,71 @@
+<html>
+  <head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="WebAniProj2.css">
+
+  <style>
+      
+#background {
+	animation: colorChange 2s;
+	animation-fill-mode: forwards;
+}
+
+#card2 {
+	z-index: 5;
+	animation: cardOut 2s 0s, cardOut .5s 2s, fan 1s 3s, fan 0.5s 4s;
+	animation-fill-mode: forwards, forwards, forwards;
+	animation-direction: normal, reverse, normal, reverse;
+}
+
+#card1, #card3, #card4, #card5{
+	animation: fan .5s 2s, fan .5s 4s;
+	animation-fill-mode: forwards, forwards;
+	animation-direction: normal, reverse;
+}
+
+@keyframes cardOut {
+	from{}
+	to { left: 450px; top: 60px;}
+}
+
+@keyframes colorChange {
+	from{}
+	to {background-color: #7F62E8}
+}
+	  
+  </style>
+  </head>
+
+  <body>
+    <div id="background" >
+        <div id="container">
+            <a href="WebAniProj2 - Heart.html">
+                <div id="card1" class="card">
+                    <div id="heart"></div>
+                </div>
+            </a>
+            <a href="WebAniProj2 - Triangle.html">
+                <div id="card2" class="card">
+                    <div class="triangle"></div>
+                </div>
+            </a>
+            <a href="WebAniProj2 - Circle.html">
+                <div id="card3" class="card">
+                    <div class="circle"></div>
+                </div>
+            </a>
+            <a href="WebAniProj2 - Diamond.html">
+                <div id="card4" class="card">
+                    <div id="cut-diamond"></div>
+                </div>
+            </a>
+            <a href="WebAniProj2 - Square.html">
+                <div id="card5" class="card">
+                    <div class="box"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+  </body>
+
+</html>

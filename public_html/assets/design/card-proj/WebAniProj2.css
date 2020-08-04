@@ -1,0 +1,192 @@
+body {
+	margin: 0;
+}
+#background {
+    position: fixed;
+	background-color: gray;
+    width: 100%;
+	height: 100%;
+}
+
+#container {
+    width: 1000px;
+    height: 200px;
+    transform: translateX(-100px);
+    position: relative;
+    margin: 200px auto;
+}
+
+.card{
+	width: 135px;
+	height: 200px;
+	background: white;
+	border-radius: 25px;
+	position: absolute;
+	transform-origin: bottom;
+}
+
+#card1 {
+	border: 5px solid #FF578D;
+	left: 500px;
+	top: 100px;
+	position: absolute;
+	transform: rotate(-80deg);
+	animation: fan .5s 2s, fan .5s 4s;
+}
+
+#card2{
+	border: 5px solid #7F62E8;
+	left: 500px;
+	top: 100px;
+	transform: rotate(-45deg);
+	animation: fan .5s 2s, fan .5s 4s;
+}
+#card3{
+	border: 5px solid #58EFFF;
+	left: 500px;
+	top: 100px;
+	animation: fan .5s 2s, fan .5s 4s;
+}
+#card4{
+	border: 5px solid #60E84D;
+	left: 500px;
+	top: 100px;
+	transform: rotate(45deg);
+}
+#card5{
+	border: 5px solid #FFE35B;
+	left: 500px;
+	top: 100px;
+	transform: rotate(80deg);
+	animation: fan .5s 2s, fan .5s 4s;
+}
+
+.card:hover {
+	box-shadow: 0 -8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#card1:hover {
+	transform: rotate(-80deg) translateY(-10px);
+} 
+
+#card2:hover {
+	transform: rotate(-45deg) translateY(-10px);
+}
+
+#card3:hover {
+	transform: translateY(-10px);
+}
+
+#card4:hover {
+	transform: rotate(45deg) translateY(-10px);
+}
+
+#card5:hover {
+	transform: rotate(80deg) translateY(-10px);
+}
+
+.box {
+	width: 50px;
+	height: 50px;
+	background: #FFE35B;
+	position: absolute;
+	left: 45px;
+	top: 55px;
+}
+
+.triangle {
+	width: 0;
+	height: 0;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	border-bottom: 60px solid #7F62E8;
+	position: absolute;
+	left: 35px;
+	top: 45px;
+}
+
+.circle {
+	width: 65px;
+	height: 65px;
+	background: #58EFFF;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	position: absolute;
+	left: 35px;
+	top: 45px;
+}
+
+#cut-diamond {
+	border-style: solid;
+	border-color: transparent transparent #60E84D transparent;
+	border-width: 0 25px 25px 25px;
+	height: 0;
+	width: 30px;
+	position: absolute;
+	margin: 15px 0 30px 0;
+	left: 30px;
+	top: 35px;
+}
+#cut-diamond:after {
+	content: "";
+	position: absolute;
+	top: 24px;
+	left: -25px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-color: #60E84D transparent transparent transparent;
+	border-width: 55px 40px 0 40px;
+}
+
+
+#heart {
+	background-color: #FF578D;
+	height: 45px;
+	transform: rotate(-45deg);
+	width: 45px;
+	position: absolute;
+	left: 45px;
+	top: 55px
+}
+
+#heart:before, #heart:after {
+	content: "";
+	background-color: #FF578D;
+	border-radius: 50%;
+	height: 45px;
+	position: absolute;
+	width: 45px;
+}
+
+#heart:before {
+	top: -25px;
+	left: 0;
+}
+
+#heart:after {
+	left: 25px;
+	top: 0;
+}
+@keyframes cardOut {
+	from{}
+	to { left: 550px; top: 60px;}
+}
+
+@Keyframes fan {
+	from{}
+	to {transform: rotate(0deg); left: 500px; top: 100px;}
+}
+
+@keyframes colorChange {
+	from{}
+	to {background-color: #60E84D}
+}
+
+@keyframes centerCard {
+	from{}
+	to {left: 500px;}
+}
+
+

@@ -1,0 +1,152 @@
+<html>
+  <head>
+  <title></title>
+  <style>
+	.card{
+		width: 135px;
+		height: 200px;
+    border-radius: 25px;
+    //box-shadow: 3px 3px #AAA;
+    margin: 10px;
+    position: relative;
+	}
+
+  #card1 {
+    border: 5px solid #A6483A;
+    left: 100px;
+    top: 100px;
+    position: absolute;
+    animation: moveCard 2s 1;
+    animation-fill-mode: forwards;
+  }
+
+  #card2{
+    border: 5px solid #5581BD;
+    left: 300px;
+    top: 100px;
+  }
+  #card3{
+    border: 5px solid #43A677;
+    left: 500px;
+    top: 100px;
+  }
+  #card4{
+    border: 5px solid #98BD43;
+    left: 700px;
+    top: 100px;
+  }
+  #card5{
+    border: 5px solid #B29349;
+    left: 900px;
+    top: 100px;
+  }
+
+  .box {
+    width: 50px;
+    height: 50px;
+    background: #A6483A;
+    position: absolute;
+    left: 45px;
+    top: 55px;
+  }
+
+  .triangle {
+	width: 0;
+	height: 0;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	border-bottom: 60px solid #5581BD;
+  position: absolute;
+  left: 35px;
+  top: 45px;
+}
+
+.circle {
+	width: 65px;
+	height: 65px;
+	background: #43A677;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+  position: absolute;
+  left: 35px;
+  top: 45px;
+}
+
+#cut-diamond {
+    border-style: solid;
+    border-color: transparent transparent #98BD43 transparent;
+    border-width: 0 25px 25px 25px;
+    height: 0;
+    width: 30px;
+    position: absolute;
+    margin: 15px 0 30px 0;
+    left: 30px;
+    top: 30px;
+}
+#cut-diamond:after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: -25px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: #98BD43 transparent transparent transparent;
+    border-width: 55px 40px 0 40px;
+}
+
+
+  #heart {
+  background-color: red;
+  height: 45px;
+  transform: rotate(-45deg);
+  width: 45px;
+  position: absolute;
+  left: 35px;
+  top: 55px;
+  }
+
+  #heart:before,
+  #heart:after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 45px;
+  position: absolute;
+  width: 45px;
+  }
+
+  #heart:before {
+  top: -25px;
+  left: 0;
+  }
+
+  #heart:after {
+  left: 25px;
+  top: 0;
+  }
+
+
+  </style>
+  </head>
+
+  <body>
+	<div id="card1" class="card">
+        <div id="heart"></div>
+  </div>
+  <div id="card2" class="card">
+      <div class="triangle"></div>
+  </div>
+  <div id="card3" class="card">
+      <div class="circle"></div>
+  </div>
+  <div id="card4" class="card">
+      <div id="cut-diamond"></div>
+  </div>
+  <div id="card5" class="card">
+      <div class="box"></div>
+  </div>
+  </body>
+
+</html>

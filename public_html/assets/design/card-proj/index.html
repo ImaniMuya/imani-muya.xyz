@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>Card Trick</title>
+    <link rel="stylesheet" type="text/css" href="index.css">       
+</head>
+<style>
+#canvas {
+    /* background-color: aquamarine; */
+}
+</style>
+<body>
+<canvas id="canvas" width="600" height="600">Failed to display
+    
+</canvas>
+</body>
+
+</html>
+
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+var w = canvas.width;
+var h = canvas.height;
+var lasterrender = 0;
+var cards = [];
+
+
+//TODO: make the cards in Vectr.com as SVGs then use ctx image data to return objects?
+class Card {
+    constructor (cw, ch, px, py) {
+        this.cw = 135;
+        this.ch = 200;
+        this.px = 0;
+        this.py = 0;
+    }
+    draw() {
+        ctx.fillStyle = "black";
+        ctx.fillRect(this.px, this.py, this.cw, this.ch);
+        ctx.fill();
+    }
+}
+var card = new Card();
+
+function update(progress) {
+    return;
+}
+
+function draw() {
+    ctx.fillStyle = "grey";
+    ctx.fillRect(0, 0, w, h);
+    ctx.fill();
+
+    card.draw();
+    
+}
+
+function tick(timestamp) {
+    var progress = timestamp - lasterrender;
+    update(progress);
+    draw();
+    lasterrender = timestamp;
+    window.requestAnimationFrame(tick);
+}
+
+window.requestAnimationFrame(tick);
+</script>
