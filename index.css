@@ -10,7 +10,7 @@ body {
     font-family: 'Montserrat', serif;
     font-weight: 200;
     background: #f0f8ff;
-    /* height: 100vh; */
+    /* min-height: 100vh; */
     padding: 0;
     border: 0;
     overflow-x: hidden;
@@ -52,10 +52,6 @@ body {
     align-self: flex-start;
     border-bottom: 2px solid #fff;
     min-width: 100%;
-    /*position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 999;*/
 }
 
 .navbtn {
@@ -245,18 +241,12 @@ img.game {
     margin: 10px 20px;
 }
 
-.demo-reel {
-    max-width: 800px;
-    align-content: center;
-}
-
 .film-card {
     background-color: #f0f8ff;
     box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.2);
     margin: 10px;
     padding: 0;
-    min-width: 400px;
-    max-width: 500px;
+    width: clamp(300px, calc(100% - 20px), 500px);
     border-radius: 0 0 10px 10px;
 }
 
@@ -266,7 +256,6 @@ video {
 
 .bg-img {
     padding: 10% 0;
-    /* background-image: url(assets/boom.jpg); */
     background-color: #f0f8ff ;
     background-position: 0 20%;
     background-size: cover;
@@ -329,21 +318,6 @@ video {
         border-bottom: none;
     }
 }
-
-/* @media only screen and (max-width: 1100px) {
-    #ima-container {
-        justify-content: flex-end !important;
-        padding-right: 20px;
-    }
-} */
-
-@media only screen and (max-width: 500px) {
-    
-    .estab-img {
-        background-color: pink;
-    }
-}
-
 
 .icon {
     width: 30px;
@@ -484,12 +458,11 @@ video {
     transform: translateY(calc(-1.5 * var(--ima-line-height)));
 }
 
-.laurel {
-    width: 300px;
-    height: auto;
-    background-size: contain;
-    background-repeat: no-repeat;
-    align-content: center;
+.demo-reel {
+    margin: 10px;
+    padding: 0;
+    width: clamp(300px, calc(100% - 20px), 800px);
+    border-radius: 0 0 10px 10px;
 }
 
 .embed-container { 

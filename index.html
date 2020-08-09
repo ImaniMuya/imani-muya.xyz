@@ -2,15 +2,13 @@
 <html>
 <head>
     <title>Imani Muya</title>
-    <link rel="icon" href="assets/square.png"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="index.css">
-    <!-- <link rel="stylesheet" href="./ima_files/index.css"> -->
     <link href="https://fonts.googleapis.com/css?family=Arapey|Montserrat&display=swap" rel="stylesheet">
 </head>
-<body id="body" class="column center-container nodisplay" onload="init()">
+<body id="body" class="column center-container">
     <div class="row navbar">
         <button
             id="home-btn"
@@ -112,16 +110,16 @@
         </div>
     </div>
     
-    <div id="film-content" class="page-outer fill nodisplay m0 column wrap">        
-
-        <div class="column center mt">
-            <div class=" demo-reel">
-                <iframe src="https://player.vimeo.com/video/444113836" 
-                    width="640" height="360" frameborder="0" 
-                    allow="autoplay; fullscreen" allowfullscreen>
-                </iframe>        
+    <div id="film-content" class="page-outer fill nodisplay m0 column wrap center">
+        <div class="demo-reel">
+            <div class='embed-container'>
+                <iframe src='https://player.vimeo.com/video/444113836' 
+                frameborder='0' 
+                webkitAllowFullScreen 
+                mozallowfullscreen 
+                allowFullScreen>
+                </iframe>
             </div>
-            
         </div>
 
         <div id="video-listing" class="row mt pt">
@@ -140,7 +138,6 @@
                     Short film made for Narrative Filmmaking. Ordinarily this class results in a 10ish minute short
                     that is created over the course of the semester. Due to COVID-19 we each made shorter videos with the theme 
                     Shelter in Place. This was shot and edited by me on my iPhone. 
-                    <!-- This was the second project in the Directing and Cinematography course. All projects in this class were shot with the Red Weapon, and the assignment for this project had to do with pulling focus in the middle of the shot. Makes sense that for this film our subject's downfall was his extreme focus.  -->
                 </p>
             </div>
 
@@ -156,8 +153,7 @@
                 <h2 class="text-margin">Dog Days</h2>
                 <p class="text-margin">
                     Short film made for Narrative Filmmaking. The goal for this short was to capture beauty and hope 
-                    in our current locations. Also made in quarentine. 
-                    <!-- This was the second project in the Directing and Cinematography course. All projects in this class were shot with the Red Weapon, and the assignment for this project had to do with pulling focus in the middle of the shot. Makes sense that for this film our subject's downfall was his extreme focus.  -->
+                    in our current locations. Also made in quarantine. 
                 </p>
             </div>
         
@@ -323,7 +319,7 @@
     </div>
 
     <div id="design-content" class="page-outer fill nodisplay m0">
-        <div id="design-listing" class="row mt pt">
+        <div id="design-listing" class="row mt pt center">
 
             <div class="design-card column fill mnw-300 mxw-500">
                 <a href="assets/design/card-proj/WebAniProj2 - Stacked.html" target="_blank"><img class="game" src="assets/design/card.JPG"></a>                
@@ -356,9 +352,8 @@
             <div class="design-card column fill mnw-300 mxw-400">
                 <a href="assets/design/Self_Portrait-03.png" target="_blank"><img class="game" src="assets/design/Self_Portrait-03.png"></a>                
                 <h2>Self Portrait</h2>
-                <!-- <p>Click <a href="assets/design/elements.html">here</a> go to the navigation-page</p> -->
                 <p class="text-margin">
-
+                    Created using Adobe Illustrator.
                 </p>
             </div>
 
@@ -379,14 +374,13 @@
     const btns = document.getElementsByClassName("navbtn");
     const imaniHeader = document.getElementById("imani-header");
     const body = document.getElementById("body");
-    
     function init() {
         let e = new Event("hashchange");
         window.dispatchEvent(e);
-        body.classList.remove("nodisplay");
     }
 
     window.addEventListener("hashchange", e => {
+        console.log("hashchange")
         let hash = window.location.hash; //with #
         let selectedIdx = null;
         for (let i = 0; i < pages.length; i++) {
@@ -469,22 +463,7 @@
         animate(idx)
     });
 
-    // document.getElementById('live').addEventListener('loadedmetadata', function() {
-    //     this.currentTime = 50;
-    //  }, false);
-
-    /*
-    const nurkNaturalWidth = 426;
-    const nurkNaturalHeight = 240;
-    const nurkFrame = document.getElementById("nurkFrame");
-    const nurkCard = document.getElementById("nurkCard");
-    function updateNurkScale(){
-        let newScale = nurkCard.clientWidth/nurkNaturalWidth;
-        console.log(newScale);
-        nurkFrame.style.transform = nurkFrame.style.transform = 'scale(' + newScale + ')';
-        nurkFrame.clientHeight = nurkNaturalHeight * newScale;
-    }
-    */
+    init();
 </script>
 </body>
 </html>
